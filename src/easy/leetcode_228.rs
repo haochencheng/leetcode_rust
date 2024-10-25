@@ -4,9 +4,6 @@
 // 开始指针start ,和下一个数字判断，如果下一个数字等于当前数字+1，继续寻找结束数字
 // 当前数字+1不等于下一个数字，区间结束写入结果。从新开始一个区间
 
-
-use core::num;
-
 pub trait Solution {
     fn summary_ranges(nums: Vec<i32>) -> Vec<String>;
 }

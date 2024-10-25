@@ -1,7 +1,5 @@
 // 509. 斐波那契数
 
-use core::time;
-
 pub trait Solution {
     fn find_poisoned_duration(time_series: Vec<i32>, duration: i32) -> i32  ;
 }

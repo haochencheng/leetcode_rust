@@ -3,10 +3,6 @@
 // aec abcde false
 // acau bcdccaaaadue false
 
-
-
-use std::{collections::HashMap, option};
-
 pub trait Solution {
     fn is_subsequence(s: String, t: String) -> bool ;
 }

@@ -1,7 +1,4 @@
 // 605. 种花问题
-// 
-
-use std::collections::HashMap;
 
 pub trait Solution {
     fn can_place_flowers(flowerbed: Vec<i32>, n: i32) -> bool  ;
