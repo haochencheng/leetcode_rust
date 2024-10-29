@@ -14,26 +14,21 @@
 
 pub trait Solution {
     fn ice_breaking_game(num: i32, target: i32) -> i32;
-
 }
-
 
 pub struct IceBreakingFame {}
 
 impl Solution for IceBreakingFame {
-
-    fn  ice_breaking_game(num: i32, target: i32) -> i32 {
-        println!("f(2)===={}", (0+4 )%2);
-        println!("f(3)===={}", (2+4)%3);
-        println!("f(4)===={}", (4+(2+4))%4);
-        let mut last = 0;  
-        for i in 2..num+1   {
+    fn ice_breaking_game(num: i32, target: i32) -> i32 {
+        println!("f(2)===={}", (0 + 4) % 2);
+        println!("f(3)===={}", (2 + 4) % 3);
+        println!("f(4)===={}", (4 + (2 + 4)) % 4);
+        let mut last = 0;
+        for i in 2..num + 1 {
             last = (last + target) % i;
         }
         return last;
-
     }
-
 }
 
 #[cfg(test)]
@@ -44,8 +39,6 @@ mod tests {
     fn judge_circle() {
         let num = 7;
         let target = 4;
-        assert_eq!(IceBreakingFame::ice_breaking_game(num,target),1);
-        
-        
+        assert_eq!(IceBreakingFame::ice_breaking_game(num, target), 1);
     }
 }

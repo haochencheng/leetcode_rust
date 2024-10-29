@@ -35,30 +35,24 @@ Everything worked fine since 3+5=8
 
 pub trait Solution {
     fn encryption_calculate(data_a: i32, data_b: i32) -> i32;
-
 }
-
 
 pub struct EncryptionCalculate {}
 
 impl Solution for EncryptionCalculate {
-
-    fn  encryption_calculate(data_a: i32, data_b: i32) -> i32 {
-        let mut a= data_a;
-        let mut b= data_b;
-        while b!=0 {
+    fn encryption_calculate(data_a: i32, data_b: i32) -> i32 {
+        let mut a = data_a;
+        let mut b = data_b;
+        while b != 0 {
             // 进位
-            let carry = (a&b)<<1;
-            // 求和 
-            a=a^b;
+            let carry = (a & b) << 1;
+            // 求和
+            a = a ^ b;
             // 进位作为输入
-            b=carry;
+            b = carry;
         }
         a
     }
-
-    
-
 }
 
 #[cfg(test)]
@@ -67,9 +61,10 @@ mod tests {
 
     #[test]
     fn judge_circle() {
-        let (data_a,data_b,result) = (5,-1,4);
-        assert_eq!(EncryptionCalculate::encryption_calculate(data_a,data_b),result);
-        
-        
+        let (data_a, data_b, result) = (5, -1, 4);
+        assert_eq!(
+            EncryptionCalculate::encryption_calculate(data_a, data_b),
+            result
+        );
     }
 }

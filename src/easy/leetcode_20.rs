@@ -1,18 +1,13 @@
 // 20. 有效的括号
 pub trait Solution {
-
-    fn is_valid(s: String) -> bool ;
-        
-
+    fn is_valid(s: String) -> bool;
 }
-
 
 pub struct IsValid {}
 
 impl Solution for IsValid {
-
     fn is_valid(s: String) -> bool {
-        if s.len()%2!=0 {
+        if s.len() % 2 != 0 {
             return false;
         }
         let mut _match = vec![];
@@ -22,7 +17,7 @@ impl Solution for IsValid {
                 b'[' => _match.push(b']'),
                 b'{' => _match.push(b'}'),
                 _ => {
-                    if _match.pop()!= Some(_b) {
+                    if _match.pop() != Some(_b) {
                         return false;
                     }
                 }
@@ -30,7 +25,6 @@ impl Solution for IsValid {
         }
         return _match.is_empty();
     }
-
 }
 
 #[cfg(test)]
@@ -40,12 +34,12 @@ mod tests {
     #[test]
     fn max_unique_split() {
         let s = String::from("()");
-        assert_eq!(<IsValid as Solution>::is_valid(s),true);
+        assert_eq!(<IsValid as Solution>::is_valid(s), true);
         let s = String::from("([])");
-        assert_eq!(<IsValid as Solution>::is_valid(s),true);
+        assert_eq!(<IsValid as Solution>::is_valid(s), true);
         let s = String::from("()[]{}");
-        assert_eq!(<IsValid as Solution>::is_valid(s),true);
+        assert_eq!(<IsValid as Solution>::is_valid(s), true);
         let s = String::from("([)]");
-        assert_eq!(<IsValid as Solution>::is_valid(s),false);
+        assert_eq!(<IsValid as Solution>::is_valid(s), false);
     }
 }

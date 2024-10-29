@@ -5,24 +5,21 @@ pub trait Solution {
     fn least_minutes(n: i32) -> i32;
 }
 
-
 pub struct LeastMinutes {}
 
 impl Solution for LeastMinutes {
-
     fn least_minutes(n: i32) -> i32 {
         if n == 1 {
-           return  n;
+            return n;
         }
         let mut result = 0;
-        let mut speed=1;
+        let mut speed = 1;
         while speed < n {
-            speed = speed<<1;
-            result+=1;
+            speed = speed << 1;
+            result += 1;
         }
-        return result+1;
+        return result + 1;
     }
-
 }
 
 #[cfg(test)]
@@ -31,9 +28,9 @@ mod tests {
 
     #[test]
     fn max_unique_split() {
-        assert_eq!(LeastMinutes::least_minutes(2),2);
-        assert_eq!(LeastMinutes::least_minutes(4),3);
-        assert_eq!(LeastMinutes::least_minutes(5),4);
-        assert_eq!(LeastMinutes::least_minutes(7),4);
+        assert_eq!(LeastMinutes::least_minutes(2), 2);
+        assert_eq!(LeastMinutes::least_minutes(4), 3);
+        assert_eq!(LeastMinutes::least_minutes(5), 4);
+        assert_eq!(LeastMinutes::least_minutes(7), 4);
     }
 }

@@ -4,14 +4,12 @@
 // acau bcdccaaaadue false
 
 pub trait Solution {
-    fn is_subsequence(s: String, t: String) -> bool ;
+    fn is_subsequence(s: String, t: String) -> bool;
 }
-
 
 pub struct IsSubsequence {}
 
 impl Solution for IsSubsequence {
-
     fn is_subsequence(s: String, t: String) -> bool {
         let s = s.chars().collect::<Vec<_>>();
         let t = t.chars().collect::<Vec<_>>();
@@ -22,7 +20,6 @@ impl Solution for IsSubsequence {
         }
         si == s.len()
     }
-
 }
 
 #[cfg(test)]
@@ -33,14 +30,14 @@ mod tests {
     fn max_unique_split() {
         let s = String::from("abc");
         let t = String::from("ahbgdc");
-        assert_eq!(IsSubsequence::is_subsequence(s, t),true);
-        
+        assert_eq!(IsSubsequence::is_subsequence(s, t), true);
+
         let s = String::from("aaaaaa");
         let t = String::from("bbaaaa");
-        assert_eq!(IsSubsequence::is_subsequence(s, t),false);
+        assert_eq!(IsSubsequence::is_subsequence(s, t), false);
 
         let s = String::from("ab");
         let t = String::from("baab");
-        assert_eq!(IsSubsequence::is_subsequence(s, t),true);
+        assert_eq!(IsSubsequence::is_subsequence(s, t), true);
     }
 }
