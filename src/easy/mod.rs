@@ -20,3 +20,5 @@ mod lcr186;
 mod lcr182;
 mod lcr181;
 mod lcr180;
+mod lcr179;
+mod lcr176;
