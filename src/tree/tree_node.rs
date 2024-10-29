@@ -1,8 +1,6 @@
 use std::rc::Rc;
 use std::cell::RefCell;
 
-
-
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {

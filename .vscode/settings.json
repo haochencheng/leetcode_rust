@@ -1,3 +1,10 @@
 {
-    "googleTranslateExt.replaceText": true
+    "googleTranslateExt.replaceText": true,
+  "files.readonlyInclude": {
+    // rust std and third party crates
+    "**/.cargo/registry/**": true,
+    "**/.rustup/**": true,
+    "**/.cargo/git/**": true,
+    "**/Cargo.lock": true,
+}
 }
