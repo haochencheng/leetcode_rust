@@ -52,21 +52,21 @@ impl ListNode {
         Some(root)
     }
 
-    pub fn get_last_node(head: Option<Rc<RefCell<ListNode>>>) -> Option<Rc<RefCell<ListNode>>> {
-        let mut current = head;
+    // pub fn get_last_node(head: Option<Rc<RefCell<ListNode>>>) -> Option<Rc<RefCell<ListNode>>> {
+    //     let mut current = head;
 
-        while let Some(node) = current {
-            // 获取当前节点的下一个节点
-            current = node.as_ref().borrow().next.clone();
-        }
+    //     while let Some(node) = current {
+    //         // 获取当前节点的下一个节点
+    //         current = node.as_ref().borrow().next.clone();
+    //     }
 
-        // 当前节点为 None，返回最后一个非 None 的节点
-        if let Some(node) = current {
-            Some(node)
-        } else {
-            None
-        }
-    }
+    //     // 当前节点为 None，返回最后一个非 None 的节点
+    //     if let Some(node) = current {
+    //         Some(node)
+    //     } else {
+    //         None
+    //     }
+    // }
 
     // display 方法将返回当前节点的字符串表示
     pub fn display(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
