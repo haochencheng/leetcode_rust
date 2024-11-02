@@ -19,7 +19,7 @@ impl MinStack {
     }
 
     fn push(&mut self, x: i32) {
-        &self.val.push(x);
+        let _ = &self.val.push(x);
         self.min = *&self.min.min(x);
     }
 

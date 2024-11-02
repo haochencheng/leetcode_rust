@@ -1,3 +1,5 @@
+mod lcr145;
+mod lcr146;
 mod lcr147;
 mod lcr150;
 mod lcr158;
