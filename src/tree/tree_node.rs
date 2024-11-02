@@ -45,4 +45,18 @@ impl TreeNode {
         }
         Some(root)
     }
+
+    pub fn to_vec(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Option<i32>> {
+        let mut ans = Vec::new();
+        let mut queue = vec![root];
+        while !queue.is_empty() {
+            let current = queue.remove(0);
+            if let Some(node) = current {
+                ans.push(Some(node.borrow().val));
+                queue.push(node.borrow().left.clone());
+                queue.push(node.borrow().right.clone());
+            }
+        }
+        ans
+    }
 }
