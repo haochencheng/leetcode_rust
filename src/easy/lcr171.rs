@@ -1,8 +1,6 @@
 // LCR 171. 训练计划 V
 use crate::tree::list_node::ListNode;
-use std::borrow::{Borrow, BorrowMut};
 use std::cell::RefCell;
-use std::ops::Deref;
 use std::rc::Rc;
 
 pub trait Solution {
