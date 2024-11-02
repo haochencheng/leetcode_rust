@@ -1,3 +1,4 @@
+mod lcr147;
 mod lcr150;
 mod lcr158;
 mod lcr159;
@@ -20,6 +21,7 @@ mod lcs1;
 mod lcs2;
 mod leetcode_20;
 mod leetcode_228;
+mod leetcode_3266;
 mod leetcode_392;
 mod leetcode_495;
 mod leetcode_509;
