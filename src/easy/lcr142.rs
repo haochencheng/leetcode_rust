@@ -37,8 +37,6 @@ impl Solution for TrainningPlan {
 #[cfg(test)]
 mod tests {
 
-    use std::ops::Deref;
-
     use super::*;
 
     #[test]

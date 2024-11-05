@@ -1,3 +1,4 @@
+mod lcr124;
 mod lcr125;
 mod lcr126;
 mod lcr127;

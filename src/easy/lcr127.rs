@@ -9,7 +9,7 @@ pub struct TrainWays {}
 impl Solution for TrainWays {
     fn train_ways(num: i32) -> i32 {
         let (mut a, mut b, mut sum) = (1, 1, 1);
-        for i in 0..num - 1 {
+        for _i in 0..num - 1 {
             sum = (a + b) % 1000000007;
             a = b;
             b = sum;

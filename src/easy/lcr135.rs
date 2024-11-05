@@ -9,7 +9,7 @@ pub struct CountNumbers {}
 impl Solution for CountNumbers {
     fn count_numbers(cnt: i32) -> Vec<i32> {
         let mut result = 10;
-        for i in 0..cnt - 1 {
+        for _i in 0..cnt - 1 {
             result *= 10;
         }
         let mut arr = Vec::new();

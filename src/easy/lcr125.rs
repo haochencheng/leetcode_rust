@@ -39,6 +39,6 @@ mod tests {
     fn judge_circle() {
         let mut obj = CQueue::new();
         obj.append_tail(1);
-        let ret_2: i32 = obj.delete_head();
+        let _ret_2: i32 = obj.delete_head();
     }
 }
