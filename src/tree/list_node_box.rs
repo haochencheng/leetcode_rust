@@ -1,4 +1,3 @@
-use std::borrow::BorrowMut;
 use std::fmt;
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -33,6 +32,19 @@ impl ListNode {
             current = Some(new_node);
         }
         current
+    }
+
+    pub fn get_by_index(head: &Option<Box<ListNode>>, i: i32) -> Option<Box<ListNode>> {
+        let mut index = 0;
+        let mut current = head;
+        while let Some(node) = current {
+            if index == i {
+                return Some(node.clone());
+            }
+            index += 1;
+            current = &node.next;
+        }
+        return None;
     }
 
     // display 方法将返回当前节点的字符串表示
