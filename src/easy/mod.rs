@@ -1,3 +1,15 @@
+mod lcr034;
+mod lcr041;
+mod lcr042;
+mod lcr052;
+mod lcr056;
+mod lcr059;
+mod lcr059_1;
+mod lcr067;
+mod lcr068;
+mod lcr069;
+mod lcr072;
+mod lcr075;
 mod lcr088;
 mod lcr120;
 mod lcr122;

@@ -1,6 +1,3 @@
-use core::num;
-use std::collections::HashMap;
-
 // 不简单的简单题
 pub trait Solution {
     fn can_partition(nums: Vec<i32>) -> bool;
