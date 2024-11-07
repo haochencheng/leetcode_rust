@@ -37,8 +37,6 @@ impl Solution {
 #[cfg(test)]
 mod tests {
 
-    use std::borrow::Borrow;
-
     use super::*;
 
     #[test]

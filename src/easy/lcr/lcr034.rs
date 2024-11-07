@@ -3,7 +3,7 @@ struct Solution {}
 impl Solution {
     pub fn is_alien_sorted(words: Vec<String>, order: String) -> bool {
         use std::collections::HashMap;
-        let ch2idx: HashMap<char, usize> = order.chars().zip((0..)).collect();
+        let ch2idx: HashMap<char, usize> = order.chars().zip(0..).collect();
         // println!("{:?}, {}", ch2idx, ch2idx.len());
         // 翻译一遍
         let nums: Vec<Vec<usize>> = words
