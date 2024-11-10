@@ -1,1 +1,9 @@
+mod lcp40;
+mod lcp44;
+mod lcp50;
+mod lcp51;
+mod lcp55;
+mod lcp61;
+mod lcp66;
+mod lcp72;
 mod lcp77;
