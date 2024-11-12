@@ -1,3 +1,4 @@
+mod lcp06;
 mod lcp11;
 mod lcp17;
 mod lcp18;
