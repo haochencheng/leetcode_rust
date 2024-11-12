@@ -8,7 +8,6 @@ impl Solution {
         if source.is_empty() {
             return 0;
         }
-        let mut ans = 0;
         let mut source_map: HashMap<i32, i32> = HashMap::new();
         for i in 0..source.len() {
             for j in 0..source[i].len() {
