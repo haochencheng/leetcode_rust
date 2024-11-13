@@ -1,3 +1,4 @@
+mod leetcode3000;
 mod leetcode_20;
 mod leetcode_228;
 mod leetcode_3266;
