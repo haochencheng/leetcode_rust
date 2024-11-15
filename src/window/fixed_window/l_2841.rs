@@ -21,7 +21,7 @@ impl Solution {
             ans = ans.max(hash_map.iter().map(|(k, v)| k * v).sum());
         }
 
-        let mut current_sum: i64 = hash_map.iter().map(|(k, v)| k * v).sum();
+        let mut current_sum: i64 = 0;
 
         // Slide the window
         for i in k..n {

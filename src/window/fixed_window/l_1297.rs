@@ -3,7 +3,7 @@ use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
-    pub fn max_freq(s: String, max_letters: i32, min_size: i32, max_size: i32) -> i32 {
+    pub fn max_freq(s: String, max_letters: i32, min_size: i32, _max_size: i32) -> i32 {
         let min_size = min_size as usize;
         let max_letters = max_letters as usize;
         let n = s.len();

@@ -5,7 +5,7 @@ impl Solution {
     pub fn decrypt(code: Vec<i32>, k: i32) -> Vec<i32> {
         let len: i32 = code.len() as i32;
         let mut res: Vec<i32> = vec![];
-        for (idx, value) in code.iter().enumerate() {
+        for (idx, _value) in code.iter().enumerate() {
             let mut sum: i32 = 0;
             if k > 0 {
                 for i in 1..=k {

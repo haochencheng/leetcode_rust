@@ -2,13 +2,14 @@ struct Solution {}
 
 impl Solution {
     pub fn climb_stairs(n: i32) -> i32 {
-        let arr = Vec::new();
-        arr[0] = 0;
+        let n = n as usize;
+        let mut arr = vec![0; n + 1];
+        arr[0] = 1;
         arr[1] = 1;
-        for i in 2..n {
+        for i in 2..=n {
             arr[i] = arr[i - 2] + arr[i - 1];
         }
-        arr[n - 1]
+        arr[n]
     }
 }
 
@@ -19,7 +20,7 @@ mod tests {
 
     #[test]
     fn maximum_score() {
-        let relation = vec![4, 2, 1];
-        assert_eq!(Solution::climb_stairs(relation), 4);
+        assert_eq!(Solution::climb_stairs(2), 2);
+        assert_eq!(Solution::climb_stairs(3), 3);
     }
 }
