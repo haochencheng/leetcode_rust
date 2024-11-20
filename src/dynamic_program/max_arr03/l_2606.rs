@@ -10,15 +10,16 @@ impl Solution {
         }
         let mut pre: i32 = 0;
         let mut ans: i32 = 0;
+
         for &ele in s.as_bytes() {
-            let mut val: i32 = 0;
+            let mut _val: i32 = 0;
             if let Some(x) = char_map.get(&ele) {
-                val = vals[*x] as i32;
+                _val = vals[*x] as i32;
             } else {
-                val = (ele - b'a' + 1) as i32;
+                _val = (ele - b'a' + 1) as i32;
             }
             // println!("val===={}", val);
-            pre = (val + pre).max(val);
+            pre = (_val + pre).max(_val);
             // println!("pre====={}", pre);
             ans = ans.max(pre);
         }

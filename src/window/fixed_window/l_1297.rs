@@ -54,9 +54,9 @@ mod tests {
     #[test]
     fn max_unique_split() {
         let s = "aababcaab".to_string();
-        let maxLetters = 2;
-        let minSize = 3;
-        let maxSize = 4;
-        assert_eq!(Solution::max_freq(s, maxLetters, minSize, maxSize), 2);
+        let max_letters = 2;
+        let min_size = 3;
+        let max_size = 4;
+        assert_eq!(Solution::max_freq(s, max_letters, min_size, max_size), 2);
     }
 }

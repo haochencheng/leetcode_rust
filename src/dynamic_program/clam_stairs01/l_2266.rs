@@ -20,7 +20,6 @@ impl Solution {
                 } else {
                     break;
                 }
-                println!("dp======{:#?}", dp);
             }
         }
 
@@ -35,7 +34,7 @@ mod tests {
 
     #[test]
     fn maximum_score() {
-        let pressedKeys = "22233".to_string();
-        assert_eq!(Solution::count_texts(pressedKeys), 8);
+        let pressed_keys = "22233".to_string();
+        assert_eq!(Solution::count_texts(pressed_keys), 8);
     }
 }

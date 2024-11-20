@@ -21,8 +21,6 @@ impl Solution {
             ans = ans.max(hash_map.iter().map(|(k, v)| k * v).sum());
         }
 
-        let mut current_sum: i64 = 0;
-
         // Slide the window
         for i in k..n {
             let entering = nums[i] as i64;
@@ -41,7 +39,7 @@ impl Solution {
             }
 
             // Incrementally update the sum
-            current_sum = hash_map.iter().map(|(k, v)| k * v).sum();
+            let current_sum = hash_map.iter().map(|(k, v)| k * v).sum();
             if hash_map.len() >= m {
                 ans = ans.max(current_sum);
             }
