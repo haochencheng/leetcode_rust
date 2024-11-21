@@ -20,10 +20,10 @@ mod tests {
     use super::*;
 
     #[test]
-    fn maximum_score() {
-        let nums = vec![1, 2, 3, 1];
-        assert_eq!(Solution::rob(nums), 4);
-        let nums = vec![2, 7, 9, 3, 1];
-        assert_eq!(Solution::rob(nums), 12);
+    fn delete_and_earn() {
+        let nums = vec![3, 4, 2];
+        assert_eq!(Solution::delete_and_earn(nums), 6);
+        let nums = vec![2, 2, 3, 3, 3, 4];
+        assert_eq!(Solution::delete_and_earn(nums), 9);
     }
 }
