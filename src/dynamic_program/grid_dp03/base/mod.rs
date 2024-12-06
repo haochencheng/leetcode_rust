@@ -1,4 +1,5 @@
 mod lcr120;
+mod lcr1289;
 mod lcr166;
 mod lcr2684;
 mod lcr62;
